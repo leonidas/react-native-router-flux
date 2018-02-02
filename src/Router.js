@@ -137,7 +137,7 @@ class Router extends Component {
     Actions.callback = props => {
       const constAction = (props.type && ActionMap[props.type] ? ActionMap[props.type] : null);
       if (props.key && this.props.onNavigate) {
-        this.props.onNavigate();
+        this.props.onNavigate(props.key);
       }
       if (this.props.dispatch) {
         if (constAction) {
